@@ -1,0 +1,26 @@
+file_path,category,status,size_bytes,modified_at
+data/processed/model_panel.csv,data,exists,906966,2026-07-22 02:42:36
+results/tables/dataset_summary.csv,table,exists,361,2026-07-22 02:42:36
+results/tables/class_balance.csv,table,exists,78,2026-07-22 02:42:36
+results/tables/feature_list.csv,table,exists,229,2026-07-22 02:42:36
+results/tables/model_metrics.csv,table,exists,365,2026-07-22 03:08:15
+results/tables/selected_hyperparameters.csv,table,exists,163,2026-07-22 03:08:15
+results/tables/optimisation_search_results.csv,table,exists,4188,2026-07-22 03:08:15
+results/tables/rf_predictions.csv,table,exists,47925,2026-07-22 03:08:15
+results/tables/portfolio_performance.csv,table,exists,1533,2026-07-22 03:16:32
+results/tables/benchmark_comparison.csv,table,exists,1533,2026-07-22 03:16:32
+results/tables/portfolio_monthly_returns.csv,table,exists,5874,2026-07-22 03:16:32
+results/tables/portfolio_holdings.csv,table,exists,48490,2026-07-22 03:16:32
+results/tables/transaction_cost_sensitivity.csv,table,exists,2276,2026-07-22 03:16:32
+results/tables/topk_robustness_results.csv,table,exists,1391,2026-07-22 03:22:19
+results/tables/ablation_classification_results.csv,table,exists,809,2026-07-22 03:22:19
+results/tables/ablation_portfolio_results.csv,table,exists,945,2026-07-22 03:22:19
+results/figures/confusion_matrix_baseline.png,figure,exists,94571,2026-07-22 03:08:16
+results/figures/confusion_matrix_optimised.png,figure,exists,94060,2026-07-22 03:08:16
+results/figures/roc_curve_comparison.png,figure,exists,161600,2026-07-22 03:08:17
+results/figures/cumulative_returns_comparison.png,figure,exists,264454,2026-07-22 03:16:32
+results/figures/drawdown_comparison.png,figure,exists,305479,2026-07-22 03:16:33
+results/figures/topk_robustness_total_return.png,figure,exists,168897,2026-07-22 03:22:19
+results/figures/ablation_total_return.png,figure,exists,163988,2026-07-22 03:22:20
+results/models/baseline_random_forest.joblib,model,exists,3120617,2026-07-22 03:08:16
+results/models/optimised_random_forest.joblib,model,exists,4915689,2026-07-22 03:08:16

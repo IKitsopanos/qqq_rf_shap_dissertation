@@ -1,0 +1,121 @@
+FINAL IMPLEMENTATION SUMMARY
+================================================================================
+Generated at: 2026-07-22 03:38:08
+
+1. Output-file audit
+--------------------------------------------------------------------------------
+Required files checked: 25
+Files found: 25
+Files missing: 0
+
+2. Key results for dissertation
+--------------------------------------------------------------------------------
+[dataset] benchmark: QQQ
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] number_of_stock_month_observations: 2520
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] number_of_unique_stocks: 20
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] sample_start_date: 2016-01-31
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] sample_end_date: 2026-06-30
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] number_of_predictive_features: 15
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] positive_class_count: 1292
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] negative_class_count: 1228
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] positive_class_percentage: 0.5127
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] negative_class_percentage: 0.4873
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[dataset] target_variable: outperform_qqq_next_1m
+Interpretation: Dataset characteristic used in Chapter 3 and Chapter 6.
+
+[classification] best_model_accuracy: 0.5146
+Interpretation: Best observed classification metric for optimised_random_forest.
+
+[classification] best_model_precision: 0.4764
+Interpretation: Best observed classification metric for optimised_random_forest.
+
+[classification] best_model_recall: 0.5955
+Interpretation: Best observed classification metric for optimised_random_forest.
+
+[classification] best_model_f1_score: 0.5293
+Interpretation: Best observed classification metric for optimised_random_forest.
+
+[classification] best_model_roc_auc: 0.5211
+Interpretation: Best observed classification metric for optimised_random_forest.
+
+[portfolio] best_portfolio_total_return: 0.6587
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio] best_portfolio_annualised_return: 0.2879
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio] best_portfolio_annualised_volatility: 0.2083
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio] best_portfolio_sharpe_ratio: 1.3821
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio] best_portfolio_sortino_ratio: 2.5762
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio] best_portfolio_max_drawdown: -0.1151
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio] best_portfolio_calmar_ratio: 2.5021
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio] best_portfolio_average_monthly_turnover: 0.8333
+Interpretation: Best portfolio result based on available summary table: optimised_rf_top_k.
+
+[portfolio_comparison] optimised_minus_baseline_total_return: 0.1199
+Interpretation: Difference between optimised Random Forest Top-K total return and baseline Random Forest Top-K total return.
+
+[portfolio_comparison] optimised_minus_qqq_total_return: 0.1656
+Interpretation: Difference between optimised Random Forest Top-K total return and QQQ buy-and-hold total return.
+
+[portfolio_comparison] optimised_minus_equal_weight_total_return: 0.1225
+Interpretation: Difference between optimised Random Forest Top-K total return and equal-weight universe total return.
+
+[robustness] best_topk_configuration: optimised_rf_top_k, Top-5
+Interpretation: Best Top-K robustness configuration by total return.
+
+[robustness] best_topk_total_return: 0.7862
+Interpretation: Total return of the best Top-K robustness configuration.
+
+[ablation] best_ablation_portfolio_model: without_qqq_relative
+Interpretation: Best ablation model by portfolio total return.
+
+[ablation] best_ablation_total_return: 0.7440
+Interpretation: Portfolio total return of the best ablation model.
+
+[ablation] best_ablation_classification_model: without_qqq_relative
+Interpretation: Best ablation model by ROC-AUC.
+
+[ablation] best_ablation_roc_auc: 0.5237
+Interpretation: ROC-AUC of the best ablation classification model.
+
+[implementation_scope] implemented_explainability_method: Random Forest feature importance and feature-group ablation; SHAP not implemented in final code.
+Interpretation: Use this to keep the dissertation aligned with the supervisor instruction to avoid SHAP for now.
+
+3. Report-writing guidance
+--------------------------------------------------------------------------------
+Use the dataset values in Chapter 3, the model metrics in Chapter 6, the portfolio and benchmark comparisons in Chapter 6, and the robustness and ablation results in Chapter 6 and Chapter 7.
+
+The final report should not claim that SHAP was implemented unless SHAP code and SHAP outputs are actually added later. For the current implementation, the appropriate explanation/diagnostic evidence is Random Forest feature importance and feature-group ablation.
+
+Recommended final technical claim: the implementation provides an end-to-end time-aware Random Forest framework for QQQ-relative stock ranking, Top-K portfolio construction, benchmark comparison, transaction-cost testing, Top-K robustness testing and feature-group ablation.

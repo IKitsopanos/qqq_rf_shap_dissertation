@@ -1,0 +1,2 @@
+start_date,end_date,number_of_stocks,stock_month_observations_before_cleaning,stock_month_observations_after_cleaning,rows_removed_due_to_missing_values,number_of_predictive_features,target_positive_count,target_negative_count,target_positive_rate,target_negative_rate
+2016-01-31,2026-06-30,20,2780,2520,260,15,1292,1228,0.5126984126984127,0.4873015873015873

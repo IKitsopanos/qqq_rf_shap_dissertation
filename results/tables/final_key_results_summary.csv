@@ -1,0 +1,35 @@
+section,metric,value,interpretation
+dataset,benchmark,QQQ,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,number_of_stock_month_observations,2520,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,number_of_unique_stocks,20,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,sample_start_date,2016-01-31,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,sample_end_date,2026-06-30,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,number_of_predictive_features,15,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,positive_class_count,1292,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,negative_class_count,1228,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,positive_class_percentage,0.5126984126984127,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,negative_class_percentage,0.4873015873015873,Dataset characteristic used in Chapter 3 and Chapter 6.
+dataset,target_variable,outperform_qqq_next_1m,Dataset characteristic used in Chapter 3 and Chapter 6.
+classification,best_model_accuracy,0.5145833333333333,Best observed classification metric for optimised_random_forest.
+classification,best_model_precision,0.4763636363636364,Best observed classification metric for optimised_random_forest.
+classification,best_model_recall,0.5954545454545455,Best observed classification metric for optimised_random_forest.
+classification,best_model_f1_score,0.5292929292929293,Best observed classification metric for optimised_random_forest.
+classification,best_model_roc_auc,0.5211013986013987,Best observed classification metric for optimised_random_forest.
+portfolio,best_portfolio_total_return,0.6587119460881039,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio,best_portfolio_annualised_return,0.2879099138092322,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio,best_portfolio_annualised_volatility,0.2083182801557318,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio,best_portfolio_sharpe_ratio,1.3820674479167183,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio,best_portfolio_sortino_ratio,2.5762162822743417,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio,best_portfolio_max_drawdown,-0.1150658664326317,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio,best_portfolio_calmar_ratio,2.502131368191596,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio,best_portfolio_average_monthly_turnover,0.8333333333333334,Best portfolio result based on available summary table: optimised_rf_top_k.
+portfolio_comparison,optimised_minus_baseline_total_return,0.11989558303064851,Difference between optimised Random Forest Top-K total return and baseline Random Forest Top-K total return.
+portfolio_comparison,optimised_minus_qqq_total_return,0.1656008079480702,Difference between optimised Random Forest Top-K total return and QQQ buy-and-hold total return.
+portfolio_comparison,optimised_minus_equal_weight_total_return,0.12247659881021611,Difference between optimised Random Forest Top-K total return and equal-weight universe total return.
+robustness,best_topk_configuration,"optimised_rf_top_k, Top-5",Best Top-K robustness configuration by total return.
+robustness,best_topk_total_return,0.7862271176376612,Total return of the best Top-K robustness configuration.
+ablation,best_ablation_portfolio_model,without_qqq_relative,Best ablation model by portfolio total return.
+ablation,best_ablation_total_return,0.7440354898822863,Portfolio total return of the best ablation model.
+ablation,best_ablation_classification_model,without_qqq_relative,Best ablation model by ROC-AUC.
+ablation,best_ablation_roc_auc,0.5237237762237763,ROC-AUC of the best ablation classification model.
+implementation_scope,implemented_explainability_method,Random Forest feature importance and feature-group ablation; SHAP not implemented in final code.,Use this to keep the dissertation aligned with the supervisor instruction to avoid SHAP for now.

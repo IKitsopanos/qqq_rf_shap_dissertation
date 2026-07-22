@@ -1,0 +1,31 @@
+DATASET SUMMARY
+================
+start_date: 2016-01-31 00:00:00
+end_date: 2026-06-30 00:00:00
+number_of_stocks: 20
+stock_month_observations_before_cleaning: 2780
+stock_month_observations_after_cleaning: 2520
+rows_removed_due_to_missing_values: 260
+number_of_predictive_features: 15
+target_positive_count: 1292
+target_negative_count: 1228
+target_positive_rate: 0.5126984126984127
+target_negative_rate: 0.4873015873015873
+
+FEATURE LIST
+============
+- ret_1m
+- ret_3m
+- ret_6m
+- ret_12m
+- volume_growth_3m
+- volatility_1m
+- volatility_3m
+- beta_3m
+- corr_qqq_3m
+- tracking_error_3m
+- max_drawdown_3m
+- relative_return_1m
+- relative_return_3m
+- relative_return_6m
+- relative_return_12m

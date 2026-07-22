@@ -1,0 +1,16 @@
+feature
+ret_1m
+ret_3m
+ret_6m
+ret_12m
+volume_growth_3m
+volatility_1m
+volatility_3m
+beta_3m
+corr_qqq_3m
+tracking_error_3m
+max_drawdown_3m
+relative_return_1m
+relative_return_3m
+relative_return_6m
+relative_return_12m

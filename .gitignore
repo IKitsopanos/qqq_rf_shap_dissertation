@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Generated / large data
+data/raw/
+data/processed/
+
+# Model outputs
+results/models/
+
+# Secrets
+.env
+
+# Temporary files
+*.log
+*.tmp
