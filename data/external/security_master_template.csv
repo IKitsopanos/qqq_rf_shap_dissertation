@@ -1,0 +1,2 @@
+security_id,ticker,company_name,index_name,entry_date,exit_date,ticker_start_date,ticker_end_date,delisting_date,delisting_return,event_type,source_name,source_url,source_retrieved_at,source_quality
+EXAMPLE_PERM_ID,EXMP,Example Corporation,NDX,2020-01-01,,2020-01-01,,,,membership,Replace with primary source,https://example.invalid,2026-08-05,unverified
