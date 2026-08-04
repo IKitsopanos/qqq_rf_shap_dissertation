@@ -1,0 +1,111 @@
+protocol:
+  name: prospective_evaluation_v1
+  status: locked_for_future_observations
+  freeze_date_utc: '2026-08-04T01:48:00Z'
+  purpose: >-
+    Evaluate the existing benchmark-relative ranking pipeline on observations that
+    occur strictly after the protocol freeze. No historical result is reclassified
+    as prospective evidence.
+  epistemic_status: prospective_after_freeze_only
+
+scope:
+  primary_universe: selected_qqq_20
+  benchmark: QQQ
+  decision_frequency: monthly
+  prediction_horizon_months: 1
+  first_eligible_decision_month_end: '2026-08-31'
+  first_eligible_outcome_month_end: '2026-09-30'
+  minimum_evaluation_months: 6
+  preferred_evaluation_months: 12
+  retraining_policy: none_during_locked_window
+  model_selection_policy: no_changes_after_freeze
+
+features:
+  ordered_columns:
+    - ret_1m
+    - ret_3m
+    - ret_6m
+    - ret_12m
+    - volume_growth_3m
+    - volatility_1m
+    - volatility_3m
+    - beta_3m
+    - corr_qqq_3m
+    - tracking_error_3m
+    - max_drawdown_3m
+    - relative_return_1m
+    - relative_return_3m
+    - relative_return_6m
+    - relative_return_12m
+  prohibited_columns:
+    - future_stock_return
+    - future_qqq_return
+    - outperform_qqq_next_1m
+    - date
+    - ticker
+
+models:
+  baseline_random_forest:
+    artifact: results/models/baseline_random_forest.joblib
+    role: frozen_reference
+  optimised_random_forest:
+    artifact: results/models/optimised_random_forest.joblib
+    role: frozen_primary_model
+  comparators:
+    logistic_regression: frozen_if_artifact_available
+    histogram_gradient_boosting: frozen_if_artifact_available
+    relative_momentum_6m: deterministic_score
+
+portfolio:
+  selection_rule: top_10_by_score
+  weighting_rule: equal_weight
+  long_only: true
+  rebalance_frequency: monthly
+  transaction_cost_bps: 10
+  benchmarks:
+    - qqq_buy_and_hold
+    - equal_weight_universe
+
+primary_metrics:
+  classification:
+    - roc_auc
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - brier_score
+  ranking:
+    - monthly_spearman_ic
+    - precision_at_5
+    - precision_at_10
+    - mean_relative_return_at_5
+    - mean_relative_return_at_10
+  portfolio:
+    - total_return
+    - annualised_return
+    - annualised_volatility
+    - sharpe_ratio_zero_rf
+    - maximum_drawdown
+    - turnover
+    - terminal_wealth_advantage_vs_qqq
+
+execution_controls:
+  allow_historical_backfill: false
+  allow_model_reselection: false
+  allow_feature_changes: false
+  allow_portfolio_rule_changes: false
+  allow_cost_changes: false
+  allow_result_overwrite: false
+  require_protocol_hash_match: true
+  require_single_month_append_only: true
+  require_negative_results_to_be_preserved: true
+
+reporting:
+  label_before_minimum_months: prospective_monitoring_only
+  label_after_minimum_months: preliminary_prospective_evidence
+  label_after_preferred_months: primary_prospective_evidence
+  mandatory_disclosures:
+    - short_horizon_uncertainty
+    - selected_universe_survivorship_bias
+    - simplified_transaction_costs
+    - no_live_execution_or_market_impact_model
